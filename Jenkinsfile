@@ -21,7 +21,13 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Show Content') {
+           steps {
+               sh 'cat index.html'
+           }
+        }
+
+         stage('Deploy') {
             steps {
                 sh 'cp index.html /tmp/index.html'
             }
